@@ -9,9 +9,9 @@ public class NommeLesJoueurs {
 		System.out.println("Joueur 2, quel est ton nom ?");
 	}
 
-	//passer le nom du joueur en paramètre
+	//passer le nom du joueur en paramï¿½tre
 	public void welcome(String nomJoueur) {
-		System.out.println("Bienvenue à toi, " + nomJoueur+" !");
+		System.out.println("Bienvenue Ã  toi, " + nomJoueur+" !");
 	}
 
 }

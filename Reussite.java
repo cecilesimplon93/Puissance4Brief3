@@ -1,51 +1,76 @@
+import java.util.Scanner;
+
 
 public class Reussite {
-	Reussite jeuEnCours = new Reussite();
-	
-	
-	// ‡ qui de jouer ? appel du joueur et choix du visuel du jeton qui sera posÈ (8 ou 0)
-	public void aQuiDeJouer {
 	int tourDeJeu=0;
-	int ping; // ping sera le nombre envoyÈ pour servir de jeton (0 ou 8)
-	if (tourDeJeu % 2 != 0) { System.out.println("test / ‡ toi de jouer, joueur 1"); 
-	ping=0;
-	}
-	//System.out.println(joueur1 + ", dans quelle colonne veux-tu jouer ?")
-	else {System.out.println(Systemn.out.println("test / ‡ joueur 2 de choisir colonne");
-	ping=8;}
-	tourDeJeu++;
-	//impression du texte et reception de la saisie
+	// ping sera le nombre qui servira de jeton (0 ou 8)
+	int ping;
+	// appel du joueur et choix du visuel du jeton qui sera pose (8 ou 0)
+	int choix;
 	
-	}
-	
-	public void implementationColonne {// comment savoir si la place est libre, et sinon?
-		
-	}
-	
-	// o˘ va arriver le jeton 8 ou 0
-	// choix de la colonne, choisir l'indice libre
-	// nouvel affichage du tableau
-	//je recupËre l'indice dÈfinitif, je vais regarder autour
-	
-	
-	public class verifications {
-	// si 4 cases horizontales ‡ partir du point P et sur sa droite?
-	if (plateau[lig][col]==plateau[lig][col+1]==plateau[lig][col+2]==plateau[lig][col+3]) { //RÈussite} 
-		System.out.println("test rÈussite ok");
-		jeuEnCours.victoire();
+	public void aQuiDeJouer() {
+		System.out.println(" \n \n");
+		System.out.println(tourDeJeu +"  "+  ping);
+		 
+		if(tourDeJeu % 2 ==0) { System.out.println("Joueur 1, quelle colonne ?"); 
+		ping=0;
 		}
-	else { // si aucune condition remplie => pas de victoire, on recommence}
-	}
-	
-	} //fin des verifications
-	
-	
-	public void victoire {
+		if(tourDeJeu %2 != 0) { System.out.println("Joueur 2, quelle colonne ?");
+		ping=8;}
+		else {System.out.println ("Huston, on a un probleme !!!");}
+		//fin √† qui de jouer ? + saisie
 		
-	}
-		System.out.println ("VICTOIRE !!!!!");
-		// System.out.printlnt(Nomdujoueur + " est le gagnant.")
-		// faire un exit
+		Scanner scann4= new Scanner(System.in);
+		choix = scann4.nextInt();
+		
+		System.out.println ("Tu as choisi la colonne "+choix);
+		//inserer nom des joueurs
+	tourDeJeu++;
+	System.out.println("test /tour de jeu" + tourDeJeu +"  ");
+	};
+
+public void tourDeJeu() {
+	
+	//impl√©menter le plateau
+	System.out.println("test/d√©but tourDeJeux()");
+	System.out.println("Joueur a choisi colonne "+choix);
+	tourDeJeu++; 
+	System.out.println("test / tour de jeu √† "+ tourDeJeu);
+	System.out.println(plateau[4][2]);
+	
+	/*while (plateau[lig][choix]!=1) { plateau[lig++][choix] };
+	plateau[lig][choix]=ping;*/
 	}
 	
-}
+	
+	
+	
+	
+	 }
+
+
+	/* 
+	 * public void implementationColonne() {// comment savoir si la place est libre,
+	 * et sinon?
+	 * 
+	 * // oÔøΩ va arriver le jeton 8 ou 0 // choix de la colonne, choisir l'indice
+	 * libre // nouvel affichage du tableau //je recupÔøΩre l'indice dÔøΩfinitif, je
+	 * vais regarder autour
+	 * 
+	 
+	 * public class verifications { // si 4 cases horizontales ÔøΩ partir du point P
+	 * et sur sa droite? if
+	 * (plateau[lig][col]==plateau[lig][col+1]==plateau[lig][col+2]==plateau[lig][
+	 * col+3]) { //RÔøΩussite} System.out.println("test rÔøΩussite ok");
+	 * jeuEnCours.victoire(); } else { // si aucune condition remplie => pas de
+	 * victoire, on recommence} }
+	 * 
+	 * } //fin des verifications
+	 * 
+	 * 
+	 * public void victoire(nomGagnant) {System.out.println( "Congratulations "+
+	 * nomGagnant +" !!!" ); // refaire pareil en ins√©rant le nom du gagnant };
+	 */
+
+};
+
